@@ -23,8 +23,6 @@ window.Vue.config.productionTip = false;
 import  Dashboard from './modules/single/dashboard/Dashboard.vue';
 
 Vue.component('dashboard-clinic-component', require('./modules/inline/dashboard/MainDashboard.vue').default);
-Vue.component('miko-clinic-component', require('./modules/inline/dashboard/Miko.vue').default);
-Vue.component('elbert-clinic-component', require('./modules/inline/dashboard/Elbert.vue').default);
 
 Vue.component('appetiser-app', require('./modules/inline/dashboard/Appetiser.vue').default);
 
