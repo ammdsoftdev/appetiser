@@ -1,8 +1,10 @@
 
 <miko-clinic-component inline-template :miko_watcher="miko_watcher">
+
     <div>
-        <button @click="_invokeParentMethod()" >Click Me</button>
-        <button >Click Me 2</button>
+        <button @click="_invokeParentMethod()" >Click Me - MIKO</button>
+        <button >Click Me 2 - MIKO</button>
+        <p>appetiser</p>
 
         <template>
         <v-row justify="center">

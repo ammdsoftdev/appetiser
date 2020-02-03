@@ -3,9 +3,17 @@ import Vue from 'vue';
 import { ValidationProvider, extend } from 'vee-validate';
 import {store} from './store/store';
 import VueRouter from 'vue-router'
+import 'vuetify/dist/vuetify.min.css'
 window.axios = require('axios');
 Vue.prototype.$http = window.axios;
 window.Vuetify = require('vuetify');
+
+//window.VueAxios=require('vue-axios').default;
+
+//window.Vue = require('vue');
+
+//Vue.use(VueAxios);
+Vue.use(axios);
 
 Vue.use(Vuetify);;
 window.Vue = Vue;
@@ -17,6 +25,8 @@ import  Dashboard from './modules/single/dashboard/Dashboard.vue';
 Vue.component('dashboard-clinic-component', require('./modules/inline/dashboard/MainDashboard.vue').default);
 Vue.component('miko-clinic-component', require('./modules/inline/dashboard/Miko.vue').default);
 Vue.component('elbert-clinic-component', require('./modules/inline/dashboard/Elbert.vue').default);
+
+Vue.component('appetiser-app', require('./modules/inline/dashboard/Appetiser.vue').default);
 
 const router = new VueRouter({
     routes: [
@@ -30,7 +40,7 @@ const router = new VueRouter({
 })
 
 Vue.component('ValidationProvider', ValidationProvider);
-var app = new Vue({
+const app = new Vue({
     store,
     router: router,
     vuetify: new Vuetify(),

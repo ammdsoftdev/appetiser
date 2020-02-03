@@ -9,7 +9,10 @@ export default {
             selected_name: this.name,
             miko_watcher: 1,
             elbert_watcher: 1,
-            is_show: false
+            appetiser_watcher: 1,
+            is_show: false,
+
+
         }
     },
     methods: {
@@ -27,22 +30,8 @@ export default {
                 }).catch(err => {
                     this.loader = false;
                 });
-        },
-        _mikoTest(t) {
-            alert(t);
-        },
-        _invokeFromChild(pan) {
-            alert(pan);
-        },
-        _triggerMiko() {
-            this.miko_watcher++;
-        },
-        _triggerElbert() {
-            this.elbert_watcher++;
-            this.is_show = !this.is_show;
         }
     },
     mounted: function() {
     }
 };
-</script>
